@@ -10,3 +10,6 @@
     - __`*`: WildCard -> 여러 내용을 한꺼번에 지정할 목적으로 사용__
         - ` import * as C from './getType' `
 1. Named와 Default 같이 사용 가능
+
+# *__JSON__*
+> *J*ava*S*cript *O*bject *N*otation
