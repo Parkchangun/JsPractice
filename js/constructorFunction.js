@@ -1,5 +1,5 @@
 "use strict";
-class User {
+export class User {
   constructor(first, last) {
     this.firstName = first;
     this.lastName = last;
@@ -8,6 +8,7 @@ class User {
     return `${this.firstName} ${this.lastName}`;
   }
 }
+
 
 // function User(first, last) {
 //   this.firstName = first;
@@ -20,10 +21,10 @@ class User {
 
 
 
-const chan = new User(`changeon`, `Park`);
-const yeol = new User('yeol', 'Yang');
-const yong = new User('yong', 'Park');
+// const chan = new User(`changeon`, `Park`);
+// const yeol = new User('yeol', 'Yang');
+// const yong = new User('yong', 'Park');
 
-console.log(chan.getFullName());
-console.log(yeol.getFullName());
-console.log(yong.getFullName());
+// console.log(chan.getFullName());
+// console.log(yeol.getFullName());
+// console.log(yong.getFullName());
