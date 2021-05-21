@@ -13,3 +13,7 @@
 
 # *__JSON__*
 > *J*ava*S*cript *O*bject *N*otation
+>lowdb github 참고
+
+query string
+method chaining

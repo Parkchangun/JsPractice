@@ -6,6 +6,7 @@ import getRandom from './getRandom'
 import * as C from './getType'
 import * as User from './constructorFunction'
 import myData from '../myData.json'
+import axios from 'axios'
 
 console.log(_.camelCase('the hellow World'));
 console.log(getRandom(), getRandom());
@@ -25,3 +26,41 @@ console.log('------export / import end------')
 
 console.log(myData);
 console.log(typeof(myData));
+
+const setData = { 
+  name: 'changeon',
+  age: 25,
+  emails: [
+    'qkrcksrjs@gmail.com',
+    'qkrcksrjs@naver.com'
+  ]
+}
+//Vanilla JS
+localStorage.setItem('locData', JSON.stringify(setData));
+sessionStorage.setItem('sessionData', JSON.stringify(setData));
+
+console.log(JSON.parse(localStorage.getItem('locData')));
+// localStorage.removeItem('locData');
+//덮어쓰기
+const str = JSON.parse(localStorage.getItem('locData'));
+str.age = 27;
+console.log(str);
+localStorage.setItem('locData', JSON.stringify(str));
+
+// axios
+function fetchMovies() {
+  axios
+  .get('https://www.omdbapi.com/?apikey=7035c60c&s=frozen')
+  .then(res => {
+    console.log(res);
+    const h1El = document.querySelector(`h1`);
+    const imgEl = document.querySelector(`img`);
+    h1El.textContent = res.data.Search[0].Title;
+    imgEl.src = res.data.Search[0].Poster;
+  });
+}
+fetchMovies();
+
+
+
+
